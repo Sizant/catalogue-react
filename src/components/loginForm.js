@@ -22,10 +22,14 @@ const LoginForm=()=>{
     }
 
 const submitHandler=()=>{
+
+    var re = /\S+@\S+\.\S+/;
+
     localStorage.setItem('userdetails',JSON.stringify(userDetails))
-    if(userDetails.email=='' || userDetails.userName==''){
-    alert("Invalid UserName or Email")
-    } else{
+    if(userDetails.email=='' || userDetails.userName=='' || re.test(userDetails.email) ===false || userDetails.userName.length<3){
+    alert("Invalid Data")
+    } 
+     else {
      
     navigate('/card')    
     }
@@ -36,9 +40,9 @@ const submitHandler=()=>{
         <div className="cover">
             
             <h1 className="tex">Login</h1>
-            
+
             <input type="email" onChange={fnx} placeholder="email" id="email" value={userDetails.email} required></input>
-            <input type="text" onChange={fnx} placeholder="Username" id='username' value={userDetails.userName} required></input>
+            <input type="text" onChange={fnx} placeholder="Name" id='username' value={userDetails.userName} required></input>
             
            
             
