@@ -40,7 +40,26 @@ width:300px;
 
 
 .pie{
+    
     display: none;
     height: 35em;
     padding-left: 30%;
 }
+
+@media screen and (max-width: 901px) {
+    #imagesize{
+        height: 100px;
+    }
+    #titlesize {
+      font-size: 10px;
+    }
+    #textsize{
+        font-size: 8px;
+    }
+  }
+
+
+
+
+
+

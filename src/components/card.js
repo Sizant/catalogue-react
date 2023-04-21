@@ -225,12 +225,12 @@ function hide(){
         }
                 return(
                     <>           
-             <div className="col-3 mt-5">
+             <div className="col-3 lg-3 md-5 sm-12 mt-5">
              <div class="card text-white bg-secondary mb-3" >
-                 <img src={values.image} className="card-img-top" alt="..." height="200px" />
+                 <img id='imagesize' src={values.image} className="card-img-top" alt="..." height="200px" />
                  <div class="card-body">
-                 <h5 class="card-title">{values.title}</h5>
-                 <p class="card-text">{trimmedString}</p>
+                 <h5 class="card-title" id='titlesize'>{values.title}</h5>
+                 <p class="card-text" id='textsize'>{trimmedString}</p>
                </div>
                  </div>
               </div>
