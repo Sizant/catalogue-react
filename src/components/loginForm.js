@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import { Link, BrowserRouter, useNavigate ,Route, Routes} from "react-router-dom";
+import {  useNavigate } from "react-router-dom";
 import "./loginForm.css"
-import CardPage from "./card";
-import { Button, Card } from "react-bootstrap";
+
+import { Button } from "react-bootstrap";
 
 const LoginForm=()=>{
     const navigate=useNavigate();

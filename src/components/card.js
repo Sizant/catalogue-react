@@ -18,23 +18,19 @@ function CardPage(){
     
 
   
-
-
 ChartJS.register(ArcElement,
   Tooltip,
   Legend );
 
   
-
     const [item, setItem]=useState([]);
     const [search,setSearch]=useState('')
     const[dropDownData,setDropDownData]=useState([])
     const [selectedCategory,setSelectedCategory]=useState({label:'',value:''})
-    // console.log(item)
 
  
 
-    
+  
 useEffect(()=>{
   fakeStore()
 },[selectedCategory])
@@ -42,7 +38,6 @@ useEffect(()=>{
     useEffect(()=>{
         fakeProductData()
     },[])
-
 
     const fakeStore=async()=>{
       let url=`https://fakestoreapi.com/products`
@@ -72,22 +67,6 @@ setDropDownData(data)
 setSelectedCategory(data)
  }
  
-// console.log(search)
-
-
-
-
-// const random=()=>{
-//   let array=[]
-
-//   categories.forEach(category=>{
-//      let newFakeStoreData=fakeStoredata.filter((data)=>{
-//         data.category === category
-//        })
-//        array.push(newFakeStoreData.length+1)
-//   })
-
-// }
 
 
 console.log(selectedCategory)
@@ -252,20 +231,9 @@ function hide(){
 <div className='pie'>
 <Button className='float' onClick={hide}  variant="success">hide</Button>
   <Pie data={data}/>
-    
-    
-   
+      
  </div>
  </div>
-
-
-
-
-
-
-
-
-   
    
     </>)
 
